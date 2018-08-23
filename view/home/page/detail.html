@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://www.bluefocusgroup.com/index.html -->
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>联系我们</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="${ctxPath}${company.logoIcon}">
+    <link rel="stylesheet" type="text/css" media="screen" href="${ctxPath}/static/reception/web/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="${ctxPath}/static/reception/web/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="${ctxPath}/static/reception/web/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="${ctxPath}/static/css/bootstrap.min.css">
+
+    <script src="${ctxPath}/static/reception/web/js/jquery.min.js"></script>
+    <script src="${ctxPath}/static/reception/web/js/swiper.min.js"></script>
+    <script src="${ctxPath}/static/reception/web/js/swiper.animate1.0.3.min.js"></script>
+    <script src="${ctxPath}/static/reception/web/js/countUp.min.js"></script>
+    <script src="${ctxPath}/static/reception/web/js/min.js"></script>
+</head>
+
+<body>
+<header class="am-topbar am-topbar-inverse t-nav ">
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only am-collapsed" data-am-collapse="{target: '#doc-topbar-collapse-2'}"><span class="am-sr-only"></span> <span class="am-icon-bars"></span></button>
+    <div class="am-topbar-collapse am-collapse" id="doc-topbar-collapse-2" style="height: 20px;">
+        <ul class="am-nav am-nav-pills am-topbar-nav">
+            <li><a href="${ctxPath}/tssc">首页</a></li>
+            <li><a href="${ctxPath}/tssc/case">设计案例</a></li>
+            <li><a href="${ctxPath}/tssc/team">团队</a></li>
+            <li><a href="${ctxPath}/tssc/aboutme">关于我们</a></li>
+            <li><a href="${ctxPath}/tssc/talkme">联系我们</a></li>
+        </ul>
+    </div>
+</header>
+
+<div class="normal-layout">
+    <div class="csr-head bc-detail">
+        <div class="">
+            <div class="menu-bar">
+                <a class="stock" href="/"><img src="${ctxPath}${company.logo}" class="logo"></a>
+                <ul class="menu stock">
+                    <li><a href="${ctxPath}/tssc">首页</a></li>
+                    <li><a href="${ctxPath}/tssc/case">设计案例</a></li>
+                    <li><a href="${ctxPath}/tssc/team">团队</a></li>
+                    <li><a href="${ctxPath}/tssc/aboutme">关于我们</a></li>
+                    <li><a href="${ctxPath}/tssc/talkme">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="detail-first-content col-lg-8" style="margin: 10% auto 0 auto">
+            <p class="p1 ani fadeInUp animated detail-title text-white text-center" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5s" swiper-animate-style-cache=" " style="visibility: visible;animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1s;-webkit-animation-delay:.5s;">${integration.name}</p>
+            <p class="p2 ani fadeInUp animated detail-title-eng text-white text-center" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s" swiper-animate-style-cache=" " style="visibility: visible;animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1s;-webkit-animation-delay:1s;">${integration.engName}</p>
+            <p class="p2 ani fadeInUp animated detail-content text-white text-center" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s" swiper-animate-style-cache=" " style="text-indent: 2em;text-align:left;visibility: visible;animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1.5s;-webkit-animation-delay:1.5s;">${integration.introduce}</p>
+        </div>
+    </div>
+
+    <div class="normal-layout-white">
+        <div class="page-abme">
+            <p class="ani " swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style="font-size: 75px; color: #000; line-height: 100px; visibility: inherit;" swiper-animate-style-cache="font-size: 50px;color: #b1b1b1;line-height: 22px;">业务介绍<br></p>
+            <p class="ani " swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style="font-size: 65px; color: #000; line-height: 50px; visibility: inherit;" swiper-animate-style-cache="font-size: 24px;color: #b1b1b1;line-height: 22px;">Introduction<br></p>
+        </div>
+        <div class="ani page-abme-rig" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5s" style=";text-indent:2em;text-align: left;font-size: 20px; color: #000; line-height: 40px; visibility: inherit;" swiper-animate-style-cache="font-size: 24px;color: #b1b1b1;line-height: 22px;">
+            <p>
+                ${integration.content}
+            </p>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+
+
+    <div class="footer page9-footer color-whild row" style="position: inherit;padding-top: 5%">
+        <div class=" padding-left-10 col-md-4 ani text-left"  swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5s" swiper-animate-style-cache=" ">
+            <h2 class="mar-btm-10">联系我们</h2>
+            <p class="">地址：${company.address}</p>
+            <p class="">Phone：${company.tel}</p>
+            <p class="">Email：${company.email}</p>
+        </div>
+        <div class="col-md-4 ani img-bottom text-center" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s" swiper-animate-style-cache=" ">
+            <img src="${ctxPath}${company.logo}" class="logo-bottom-1 hidden-sm mar-btm-10">
+        </div>
+        <div class="col-md-4 ani img-bottom text-center" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s" swiper-animate-style-cache=" " >
+            <h1 class="mar-btm-10">关注我们</h1>
+            <img src="${ctxPath}${company.encode}" class="encode-bottom">
+
+        </div>
+        <div style="clear: both"></div>
+        <div class="footer-info clearfix">
+            <p class="copyright">Copyright © 2018 TSSC, All Rights Reserved.</p>
+        </div>
+    </div>
+
+
+</div>
+<script>
+    var csrSwiper = new Swiper('.swiper-container-csr', {
+        slidesPerView: 5,
+        spaceBetween: 0,
+        freeMode: true,
+        navigation: {
+            nextEl: '.csr .swiper-button-next',
+            prevEl: '.csr .swiper-button-prev',
+        }
+    });
+    $(".top").click(function() {
+        var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+        document.documentElement.scrollTop = document.body.scrollTop = -200;
+    });
+</script>
+</body></html>

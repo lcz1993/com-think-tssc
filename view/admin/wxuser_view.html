@@ -1,0 +1,109 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">{{controller.meta_title}}</h4>
+        </div>
+        <form id="ajaxForm" method="post" class="form-horizontal" action="/admin/job/edit" data-validate="parsley">
+            <div class="modal-body">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">昵称</label>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="{{data.headimgurl}}" height="80">
+                                {{data.nickname}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">备注</label>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{data.remark}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">性别</label>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {% if data.sex == 1 %}男{%elseif data.sex == 2%}女{%else%}未知{%endif%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">国家</label>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{data.country}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">省份</label>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{data.province}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">市</label>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{data.city}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">语言</label>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{data.language}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">是否关注</label>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {% if data.subscribe == 0 %}未关注{%else%}已关注{%endif%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">关注时间</label>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{ data.subscribe_time | moment('YYYY-MM-DD HH:mm:ss') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" class="form-control" name="id" value="{{data.id}}" data-required="true" >
+                <a href="#" class="btn btn-default" data-dismiss="modal">关闭</a>
+                <button class="btn btn-primary btn-s-md ajax-post" type="submit" target-form="form-horizontal">确定</button>
+            </div>
+        </form>
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

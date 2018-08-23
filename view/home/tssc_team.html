@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://www.bluefocusgroup.com/index.html -->
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>团队</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{iconLogo}}">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/home/css/main.css">
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="/static/home/css/swiper.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="/static/home/css/animate.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="/static/home/css/bootstrap.min.css">-->
+    <!--<script src="/static/home/js/jquery.min.js"></script>-->
+    <!--<script src="/static/home/js/swiper.min.js"></script>-->
+    <!--<script src="/static/home/js/swiper.animate1.0.3.min.js"></script>-->
+    <!--<script src="/static/home/js/countUp.min.js"></script>-->
+    <!--<script src="/static/home/js/min.js"></script>-->
+    <link rel="stylesheet" href="/static/home/css/team/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/home/css/team/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/static/home/css/team/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/home/css/team/zzsc.css">
+    <link rel="stylesheet" type="text/css" href="/static/home/css/team/jquery.vm-carousel.css">
+    <script src="/static/home/js/team/modernizr.js"></script>
+    <style type="text/css">
+        h2 {
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+        .vmc-centered{ padding: 10px 0; }
+        .vmc-centered img { transition: all 0.3s ease; }
+        .vmc-centered .vmc_active img { transform: scale(1.2); }
+        .team-ajax {
+            padding: 55px 0 65px;
+            position: relative
+        }
+        .team-ajax .dd {
+            width: 266px
+        }
+        .team-ajax .dd img {
+            max-width: 100%
+        }
+        .team-ajax .dt {
+            width: 810px;
+            font-size: 16px;
+            line-height: 28px;
+            color: #666
+        }
+        .team-ajax .dt .h {
+            font-size: 28px;
+            color: #333;
+            line-height: 30px;
+            margin-bottom: 10px
+        }
+        .team-ajax .dt .y {
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 22px;
+            color: #999
+        }
+        .f9-bg {
+            background: #f9f9f9
+        }
+        .w1200 {
+            width: 1200px;
+            margin: 0 auto
+        }
+        .f-cb {
+            zoom: 1
+        }
+        .loader-img {
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 9
+        }
+        .loader {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -25px 0 0 -25px;
+            font-size: 10px;
+            border-top: 1px solid rgba(0,0,0,.08);
+            border-right: 1px solid rgba(0,0,0,.08);
+            border-bottom: 1px solid rgba(0,0,0,.08);
+            border-left: 1px solid rgba(0,0,0,.5);
+            border-radius: 50%;
+            -webkit-animation: spinner 800ms infinite linear;
+            animation: spinner 800ms infinite linear
+        }
+        .fl {
+            float: left;
+            display: inline
+        }
+
+        .fr {
+            float: right;
+            display: inline
+        }
+    </style>
+</head>
+
+<body>
+<header class="am-topbar am-topbar-inverse t-nav ">
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only am-collapsed" data-am-collapse="{target: '#doc-topbar-collapse-2'}"><span class="am-sr-only"></span> <span class="am-icon-bars"></span></button>
+    <div class="am-topbar-collapse am-collapse" id="doc-topbar-collapse-2" style="height: 20px;">
+        <ul class="am-nav am-nav-pills am-topbar-nav">
+            {% for item in navigationList %}
+            <li><a href="/home/tssc/{{item.url}}">{{item.name}}</a></li>
+            {% endfor %}
+            <!--<li><a href="/tssc">首页</a></li>-->
+            <!--<li><a href="/tssc/case">设计案例</a></li>-->
+            <!--<li><a href="/tssc/team">团队</a></li>-->
+            <!--<li><a href="/tssc/aboutme">关于我们</a></li>-->
+            <!--<li><a href="/tssc/talkme">联系我们</a></li>-->
+        </ul>
+    </div>
+</header>
+
+<div class="normal-layout">
+    <div class="">
+        <div class="darkmenu">
+            <div class="menu-bar">
+                <a class="stock" href="/home/tssc/index"><img src="{{logo}}" class="logo"></a>
+                <ul class="menu">
+                    {% for item in navigationList %}
+                    <li><a href="/home/tssc/{{item.url}}" {%if item.url == data.url%}class="active-main"{%endif%}>{{item.name}}</a></li>
+                    {% endfor %}
+                    <!--<li><a href="/tssc">首页</a></li>-->
+                    <!--<li><a href="/tssc/case">设计案例</a></li>-->
+                    <!--<li><a href="/tssc/team"  class="active-main">团队</a></li>-->
+                    <!--<li><a href="/tssc/aboutme">关于我们</a></li>-->
+                    <!--<li><a href="/tssc/talkme">联系我们</a></li>-->
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="normal-layout-white" style="margin: auto">
+        <div class="img-title">
+            <h1>{{data.team[1]}}</h1>
+            <h3 class="text-CCC">{{data.team[2]}}</h3>
+        </div>
+        <div class="container">
+            <ul class="vmcarousel-normal">
+                {%for item in peopleList%}
+                    <li><img src="{{item.imgUrl}}" alt="" width="200" onclick="show({{item.id}})"></li>
+                {% endfor %}
+                <!--<li><img src="http://127.0.0.1:8361/upload/picture/2018-08-09/upload_94c461b3aa88ffe7f533736be0d8076c.jpg" alt="" width="200"></li>-->
+                <!--<li><img src="http://127.0.0.1:8361/upload/picture/2018-08-09/upload_94c461b3aa88ffe7f533736be0d8076c.jpg" alt="" width="200"></li>-->
+                <!--<li><img src="http://127.0.0.1:8361/upload/picture/2018-08-09/upload_94c461b3aa88ffe7f533736be0d8076c.jpg" alt="" width="200"></li>-->
+                <!--<li><img src="http://127.0.0.1:8361/upload/picture/2018-08-09/upload_94c461b3aa88ffe7f533736be0d8076c.jpg" alt="" width="200"></li>-->
+                <!--<li><img src="http://127.0.0.1:8361/upload/picture/2018-08-09/upload_94c461b3aa88ffe7f533736be0d8076c.jpg" alt="" width="200"></li>-->
+            </ul>
+        </div>
+        <div class="team-ajax f9-bg" style="transform: translate(0px, 0px); opacity: 1;">
+            <div class="dlbox w1200 f-cb" id="content-people">
+                <div class="dd fl">
+                    <img src="{{people.imgUrl}}" alt="">
+                </div>
+                <div class="dt fr">
+                    <div class="h">{{people.name}} </div>
+                    <div class="y">{{people.position}}</div>
+                    <p>{{people.desc}}</p>
+                </div>
+            </div>
+            <div class="loader-img" style="display: none;">
+                <div class="loader"></div>
+            </div>
+        </div>
+        <script src="/static/home/js/team/jquery-1.11.0.min.js" type="text/javascript"></script>
+        <script src="/static/home/js/team/bootstrap.min.js"></script>
+        <script src="/static/home/js/team/jquery.vm-carousel.js"></script>
+        <script type="text/javascript">
+            jQuery(function($){
+                $('.vmcarousel-normal').vmcarousel({
+                    centered: false,
+                    start_item: 0,
+                    autoplay: false,
+                    infinite: false
+                });
+            });
+        </script>
+    </div>
+    <div style="clear: both;height: 100px;"></div>
+    <div class="footer page9-footer color-whild row" style="position: inherit;padding-top: 5%">
+        <div class=" padding-left-10 col-md-4 ani text-left"  swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5s" swiper-animate-style-cache=" ">
+            <h2 class="mar-btm-10">{{leftTitle}}</h2>
+            {% for item in talkList %}
+            <p class="">{{item.left}}：{{item.right}}</p>
+            {%endfor%}
+            <!--<h2 class="mar-btm-10">联系我们</h2>-->
+            <!--<p class="">地址：${company.address}</p>-->
+            <!--<p class="">Phone：${company.tel}</p>-->
+            <!--<p class="">Email：${company.email}</p>-->
+        </div>
+        <div class="col-md-4 ani img-bottom text-center" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s" swiper-animate-style-cache=" ">
+            <img src="{{logo}}" class="logo-bottom-1 hidden-sm mar-btm-10">
+        </div>
+        <div class="col-md-4 ani img-bottom text-center" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s" swiper-animate-style-cache=" " >
+            <h1 class="mar-btm-10">{{rightTitle}}</h1>
+            <img src="{{encodeImg}}" class="encode-bottom">
+            <!--<h1 class="mar-btm-10">关注我们</h1>-->
+            <!--<img src="${company.encode}" class="encode-bottom">-->
+
+        </div>
+        <div style="clear: both"></div>
+        <div class="footer-info clearfix">
+            <p class="copyright">{{copyright}}</p>
+            <p class="copyright">{{record}}</p>
+            <!--<p class="copyright">Copyright © 2018 TSSC, All Rights Reserved.</p>-->
+        </div>
+    </div>
+
+    </div>
+
+<script>
+    // var csrSwiper = new Swiper('.swiper-container-csr', {
+    //     slidesPerView: 5,
+    //     spaceBetween: 0,
+    //     freeMode: true,
+    //     navigation: {
+    //         nextEl: '.csr .swiper-button-next',
+    //         prevEl: '.csr .swiper-button-prev',
+    //     }
+    // });
+    $(".top").click(function() {
+        var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+        document.documentElement.scrollTop = document.body.scrollTop = -200;
+    });
+    function show(id) {
+        $.ajax({
+            url:'/home/tssc/people?id='+id,
+            type:'get',
+            resultType:'json',
+            success:function (res) {
+                if(res.errno == 0){
+                    $('#content-people').empty();
+                    res = res.data;
+                    var a = '';
+                    a+= '<div class="dd fl">\n' +
+                        '<img src="'+res.imgUrl+'" alt="">\n' +
+                        '</div>\n' +
+                        '<div class="dt fr">\n' +
+                        '<div class="h">'+res.name+'</div>\n' +
+                        '<div class="y">'+res.position+'</div>\n' +
+                        '<p>'+res.desc+'</p>\n' +
+                        '</div>';
+                    var $a = $(a);
+                    $('#content-people').append($a);
+                }
+            },
+            fail:function () {
+
+            }
+        });
+
+
+        console.log(id);
+    }
+</script>
+</body></html>

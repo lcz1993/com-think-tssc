@@ -1,0 +1,122 @@
+{% extends "./inc/base.html" %}
+{% block content %}
+<section class="vbox">
+    <header class="header bg-light dk">
+        <ul class="nav nav-tabs pull-left">
+            <li class="active"><a data-toggle="tab" href="#"><i class="fa fa-comments text-muted"></i> {{ controller.meta_title }} </a></li>
+            </li>
+        </ul>
+    </header>
+
+    <section class="scrollable wrapper">
+
+        <section class="panel panel-default">
+            <div class="row wrapper">
+                <div class="col-sm-9 m-b-xs">
+                    <div class="btn-group">
+                        <a class="btn btn-sm btn-info {%if is_adopt == 0 %}active{%endif%}" href="/admin/job/index?is_adopt=0">
+                            未受理
+                        </a>
+                        <a class="btn btn-sm btn-info {%if is_adopt == 1 %}active{%endif%}" href="/admin/job/index?is_adopt=1">
+                            已受理
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="input-group pull-right search-form">
+                        <input type="text" class="input-sm form-control" name="keyword" placeholder="请输入关键字"
+                               value="{{controller.get('keyword')}}">
+                        <span class="input-group-btn">
+                        <button class="btn btn-sm btn-default" type="button" id="search" url="/admin/job/index">搜索</button>
+                      </span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped b-t b-light" data-ride="datatables">
+                    <thead>
+                    <tr>
+                        <th><label class="checkbox m-n i-checks"><input type="checkbox"><i></i></label></th>
+                        <th>ID</th>
+                        <th>姓名</th>
+                        <th>求职岗位</th>
+                        <th>工作年限</th>
+                        <th>联系方式</th>
+                        <th>简介</th>
+                        <th>预约时间</th>
+                        <th>受理时间</th>
+                        <th>备注</th>
+                        <th>是否受理</th>
+
+                        <th style="width:130px;">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for item in list.data %}
+                    <tr>
+                        <td><label class="checkbox m-n i-checks"><input type="checkbox" class="ids" value="{{item.id}}" name="ids" ><i></i></label>
+                        </td>
+                        <td>{{ item.id }}</td>
+                        <td>{{ item.name }}</td>
+                        <td>
+                            {% for recruit in recruitList %}
+                            {% if item.recruit_id == recruit.id %}{{recruit.title}}{%endif%}
+                            {% endfor %}
+                        </td>
+                        <td>{{ item.year_work }}</td>
+                        <td>{{ item.tel }}</td>
+                        <td>{{ item.desc }}</td>
+                        <td>{{ (item.create_time*1000)|moment('YYYY-MM-DD HH:mm:ss') }}</td>
+                        <td>{{ (item.adopt_time*1000)|moment('YYYY-MM-DD HH:mm:ss') }}</td>
+                        <td>{{ item.remark }}</td>
+                        <td>{% if item.is_adopt == 0 %}未受理{% elseif item.is_adopt == 1 %}已受理{% else %}作废{%endif%}</td>
+
+                        <td>
+                            <a href="/admin/job/edit/?id={{item.id}}" class="text-info" data-toggle="ajaxModal">
+                                {% if item.is_adopt == 0 %}受理{% elseif item.is_adopt == 1 %}修改备注{% else %}作废{%endif%}
+                            </a>
+                            <!--<a href="/admin/case/del/?ids={{item.id}}" class="text-info ajax-get confirm" >删除</a>-->
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <footer class="panel-footer">
+                <div class="row">
+                    <div class="col-sm-12 text-right text-center-xs">
+                        {{pagerData | safe}}
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </section>
+</section>
+
+
+{% endblock %}
+
+{% block script %}
+<script>
+    //搜索功能
+    $("#search").click(function(){
+        var url = $(this).attr('url');
+        var query  = $('.search-form').find('input').serialize();
+        query = query.replace(/(&|^)(\w*?\d*?\-*?_*?)*?=?((?=&)|(?=$))/g,'');
+        query = query.replace(/^&/g,'');
+        if( url.indexOf('?')>0 ){
+            url += '&' + query;
+        }else{
+            url += '?' + query;
+        }
+        window.location.href = url;
+    });
+
+    //回车自动提交
+    $('.search-form').find('input').keyup(function(event){
+        if(event.keyCode===13){
+            $("#search").click();
+        }
+    });
+</script>
+{% endblock %}

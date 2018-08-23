@@ -1,0 +1,111 @@
+{
+  "port": 8361,
+  "workers": 0,
+  "stickyCluster": false,
+  "startServerTimeout": 3000,
+  "reloadSignal": "SIGUSR2",
+  "processKillTimeout": 10000,
+  "jsonpCallbackField": "callback",
+  "jsonContentType": "application/json",
+  "jsonpContentType": "application/javascript",
+  "errnoField": "errno",
+  "errmsgField": "errmsg",
+  "defaultErrno": 1000,
+  "validateDefaultErrno": 1001,
+  "http_": 1,
+  "document_model_type": {
+    "1": "目录",
+    "2": "主题",
+    "3": "段落"
+  },
+  "user_administrator": [
+    1
+  ],
+  "host": "127.0.0.1",
+  "enableAgent": false,
+  "default_module": "api",
+  "weixin": {
+    "appid": "wxbdef997dc46ecdfa",
+    "secret": "61795a170cd7e30ccd16a615c14f9f09",
+    "mch_id": "1503371891",
+    "partner_key": "f13934f7872c049b8006fa8b3620c89a",
+    "notify_url": ""
+  },
+  "publicController": [
+    "api/index",
+    "api/news",
+    "api/login",
+    "api/case"
+  ],
+  "publicAction": [
+    "api/server/index",
+    "api/about/index",
+    "api/about/teamView",
+    "api/about/add"
+  ],
+  "cache": {
+    "type": "file",
+    "file": {
+      "timeout": 86400000,
+      "cachePath": "/Users/lcz/Desktop/微信小程序项目/企业介绍/微信小程序后台-小程序+企业网站/runtime/cache",
+      "pathDepth": 1,
+      "gcInterval": 86400000
+    }
+  },
+  "model": {
+    "type": "mysql",
+    "mysql": {
+      "logConnect": true,
+      "logSql": true,
+      "user": "root",
+      "password": "root",
+      "database": "company",
+      "host": "127.0.0.1",
+      "port": 3306,
+      "connectionLimit": 1,
+      "prefix": "cmswing_",
+      "cache": {
+        "type": "file",
+        "cachePath": "/Users/lcz/Desktop/微信小程序项目/企业介绍/微信小程序后台-小程序+企业网站/runtime/cache"
+      }
+    }
+  },
+  "session": {
+    "type": "file",
+    "file": {
+      "cookie": {
+        "name": "thinkjs",
+        "keys": [
+          "signature key"
+        ],
+        "signed": true
+      },
+      "sessionPath": "/Users/lcz/Desktop/微信小程序项目/企业介绍/微信小程序后台-小程序+企业网站/runtime/session"
+    }
+  },
+  "view": {
+    "type": "nunjucks",
+    "nunjucks": {
+      "viewPath": "/Users/lcz/Desktop/微信小程序项目/企业介绍/微信小程序后台-小程序+企业网站/view",
+      "sep": "_",
+      "extname": ".html"
+    }
+  },
+  "logger": {
+    "type": "console",
+    "console": {},
+    "file": {
+      "backups": 10,
+      "absolute": true,
+      "maxLogSize": 51200,
+      "filename": "/Users/lcz/Desktop/微信小程序项目/企业介绍/微信小程序后台-小程序+企业网站/logs/app.log"
+    },
+    "dateFile": {
+      "level": "ALL",
+      "absolute": true,
+      "pattern": "-yyyy-MM-dd",
+      "alwaysIncludePattern": true,
+      "filename": "/Users/lcz/Desktop/微信小程序项目/企业介绍/微信小程序后台-小程序+企业网站/logs/app.log"
+    }
+  }
+}

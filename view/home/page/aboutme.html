@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://www.bluefocusgroup.com/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>关于我们</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="${company.logoIcon}">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/css/animate.min.css">
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/swiper.min.js"></script>
+    <script src="/static/js/swiper.animate1.0.3.min.js"></script>
+    <script src="/static/js/countUp.min.js"></script>
+    <script src="/static/js/min.js"></script>
+</head>
+
+<body>
+<header class="am-topbar am-topbar-inverse t-nav ">
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only am-collapsed" data-am-collapse="{target: '#doc-topbar-collapse-2'}"><span class="am-sr-only"></span> <span class="am-icon-bars"></span></button>
+    <div class="am-topbar-collapse am-collapse" id="doc-topbar-collapse-2" style="height: 20px;">
+        <ul class="am-nav am-nav-pills am-topbar-nav">
+            <li><a href="/tssc">首页</a></li>
+            <li><a href="/tssc/case">设计案例</a></li>
+            <li><a href="/tssc/team">团队</a></li>
+            <li><a href="/tssc/aboutme">关于我们</a></li>
+            <li><a href="/tssc/talkme">联系我们</a></li>
+        </ul>
+    </div>
+</header>
+<!-- Swiper -->
+<div class="swiper-container swiper-container-vertical">
+    <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+
+        <!--第一页-->
+        <div class="swiper-slide swiper-slide-active" >
+            <div class="home-layer page1-bg">
+                <div class="menu-bar">
+                    <a href="http://www.bluefocusgroup.com/"><img src="${company.logo}" class="logo"></a>
+                    <ul class="menu">
+                        <li><a href="/tssc">首页</a></li>
+                        <li><a href="/tssc/case">设计案例</a></li>
+                        <li><a href="/tssc/team">团队</a></li>
+                        <li><a href="/tssc/aboutme" class="active-main">关于我们</a></li>
+                        <li><a href="/tssc/talkme">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="home-abme-content">
+                    <p class="p1 ani fadeInUp animated" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5s" swiper-animate-style-cache=" " style="visibility: visible;animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2s;-webkit-animation-delay:0.5s;margin-bottom: 5%">
+                        <img src="${company.logo}" class="logo-abme">
+                    </p>
+                    <h1 class="p2 ani fadeInUp animated company-title" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s" swiper-animate-style-cache=" " style="text-align:center;visibility: visible;animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1s;-webkit-animation-delay:1s;">${aboutme.saying}</h1>
+                    <p class="p2 ani fadeInUp animated company-abme" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s" swiper-animate-style-cache=" " style="text-align:center;visibility: visible;animation-duration:1s;-webkit-animation-duration:1s;animation-delay:1.5s;-webkit-animation-delay:1.5s;">${aboutme.sayingEng}</p>
+                </div>
+            </div>
+            <img class="arrowdown ani fadeInDown animated" src="/static/img/arrow-down.png" swiper-animate-effect="fadeInDown" swiper-animate-duration="2s" swiper-animate-delay="2s" swiper-animate-style-cache=" " style="font-size: 50px;visibility: visible;animation-duration:2s;-webkit-animation-duration:2s;animation-delay:3s;-webkit-animation-delay:3s;">
+        </div>
+
+        <div class="swiper-slide" >
+            <div class="home-layer page3">
+                <div class="page3-bg"></div>
+                <div class="page-abme">
+                    <p class="ani about-intro-text" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style=" visibility: hidden;" swiper-animate-style-cache="font-size: 50px;color: #b1b1b1;line-height: 22px;">${aboutme.companyIntroduce}<br></p>
+                    <p class="ani about-intro-text-eng" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style=" visibility: hidden;" swiper-animate-style-cache="font-size: 24px;color: #b1b1b1;line-height: 22px;">${aboutme.companyIntroduceEng}<br></p>
+                </div>
+                <div class="ani page-abme-rig " swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5s" style=";text-indent:2em;text-align: left;font-size: 20px; color: #FFF; line-height: 40px; visibility: hidden;" swiper-animate-style-cache="font-size: 24px;color: #b1b1b1;line-height: 22px;">
+                    <p>
+                        ${aboutme.companyIntroduceContent}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide" >
+            <div class="home-layer page7">
+                <div class="page7-bg"></div>
+                <div class="page-abme-idea">
+                    <p class="ani idea-text-cn" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style="visibility: hidden;" swiper-animate-style-cache="font-size: 50px;color: #b1b1b1;line-height: 22px;">${aboutme.myidea}<br></p>
+                    <p class="ani " swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style="font-size: 35px; color: #000; line-height: 50px; visibility: hidden;" swiper-animate-style-cache="font-size: 24px;color: #b1b1b1;line-height: 22px;">${aboutme.myideaEng}<br></p>
+                </div>
+                <div class="ani idea-text" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5s" style=";visibility: hidden;" swiper-animate-style-cache="font-size: 24px;color: #b1b1b1;line-height: 22px;">
+                    <p >${myidea.content}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide" >
+            <div class="home-layer page8">
+                <div class="page8-bg">
+                    <div class="footer-info clearfix footer reserved-bottom">
+                        <p class="copyright">Copyright © 2018 TSSC, All Rights Reserved.</p>
+                    </div>
+                </div>
+                <div class="page-abme-idea">
+                    <p class="ani " swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style="font-size: 75px; color: #000; line-height: 100px; visibility: hidden;" swiper-animate-style-cache="font-size: 50px;color: #b1b1b1;line-height: 22px;">${aboutme.advantages}<br></p>
+                    <p class="ani " swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style="font-size: 35px; color: #000; line-height: 50px; visibility: hidden;" swiper-animate-style-cache="font-size: 24px;color: #b1b1b1;line-height: 22px;">${aboutme.advantagesEng}<br></p>
+                </div>
+                <div class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5s" style=";font-size: 20px; color: #FFF; line-height: 50px; visibility: hidden;" swiper-animate-style-cache="font-size: 24px;color: #b1b1b1;line-height: 22px;">
+                    <ul class="partner-list-adv clearfix">
+                        @for(advantagesDo in advantagesDos){
+                        <li>
+                            <!--<a href="javascript:void(0)" style="display:inline-block;height:100%;width:100%">-->
+                                <img src="${advantagesDo.img}" style="height: 200px">
+                                <p class="mar-top-adva">${advantagesDo.content}</p>
+                            <!--</a>-->
+                        </li>
+                        @}
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!--<div class="swiper-slide" style="background: rgb(16, 25, 38); height: 835px;">-->
+            <!--<div class="page6-bg"></div>-->
+            <!--<div class="page6">-->
+                <!--<div class="footer page6-footer" >-->
+                    <!--<div class="float-left bottom-msg ani"  swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5s" swiper-animate-style-cache=" " >-->
+                        <!--<h2 class="mar-btm-10">联系我们</h2>-->
+                        <!--<p class="mar-top-10">地址：${company.address}</p>-->
+                        <!--<p class="mar-top-10">Phone：${company.tel}</p>-->
+                        <!--<p class="mar-top-10">Email：${company.email}</p>-->
+                    <!--</div>-->
+                    <!--<div class=" float-left ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s" swiper-animate-style-cache=" " ><img src="${company.logo}" class="logo-bottom"></div>-->
+                    <!--<div class=" float-left ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s" swiper-animate-style-cache=" " >-->
+                        <!--<h1 class="mar-btm-10">关注我们</h1>-->
+                        <!--<img src="${company.encode}" class="encode-bottom">-->
+
+                    <!--</div>-->
+                    <!--<div style="clear: both"></div>-->
+                    <!--<p class="hr-full"></p>-->
+                    <!---->
+                <!--</div>-->
+
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span></div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 0,
+        mousewheel: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            init: function() {
+                swiperAnimateCache(this);
+                swiperAnimate(this);
+            },
+            slideChangeTransitionEnd: function() {
+                swiperAnimate(this); //如果只执行一次
+                if (this.activeIndex == 1) {
+                    countUp();
+                }
+            },
+        }
+    });
+
+    function countUp() {
+        var options = {
+            useEasing: true,
+            useGrouping: false,
+            separator: '',
+            decimal: '.'
+        };
+        var number1 = new CountUp('number1', 0, 152, 0, 2, options);
+        var number2 = new CountUp('number2', 0, 6000, 0, 2, options);
+        var number3 = new CountUp('number3', 0, 35, 0, 2, options);
+        var number4 = new CountUp('number4', 0, 2000, 0, 2, options);
+        var number5 = new CountUp('number5', 0, 72, 0, 2, options);
+        var number6 = new CountUp('number6', 0, 87, 0, 2, options);
+        number1.start()
+        setTimeout(function() {
+            number2.start()
+        }, 500);
+        setTimeout(function() {
+            number3.start()
+        }, 1000);
+        setTimeout(function() {
+            number4.start()
+        }, 1500);
+        setTimeout(function() {
+            number5.start()
+        }, 2000);
+        setTimeout(function() {
+            number6.start()
+        }, 2500);
+    }
+    $('.top').click(function() {
+        swiper.slideTo(0, 1000, function() {
+            swiperAnimate(this);
+        }); //切换到第一个slide，速度为1秒
+    })
+    $('.arrowdown').click(function() {
+        swiper.slideTo(1, 1000, function() {
+            swiperAnimate(this);
+        });
+    })
+</script>
+</body></html>

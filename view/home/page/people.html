@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .f-cb {
+            zoom: 1
+        }
+
+        .f-cb:after {
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+            overflow: hidden;
+            content: "."
+        }
+
+        .fl {
+            float: left;
+            display: inline
+        }
+
+        .fr {
+            float: right;
+            display: inline
+        }
+        .loader {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -25px 0 0 -25px;
+            font-size: 10px;
+            border-top: 1px solid rgba(0,0,0,.08);
+            border-right: 1px solid rgba(0,0,0,.08);
+            border-bottom: 1px solid rgba(0,0,0,.08);
+            border-left: 1px solid rgba(0,0,0,.5);
+            border-radius: 50%;
+            -webkit-animation: spinner 800ms infinite linear;
+            animation: spinner 800ms infinite linear
+        }
+
+        .loader-img {
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 9
+        }
+
+        @-webkit-keyframes spinner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg)
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes spinner {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg)
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        .w906 {
+            width: 90.6%;
+            margin: 0 auto;
+            min-width: 1200px;
+            transform: none!important
+        }
+
+        .w1200 {
+            width: 1200px;
+            margin: 0 auto
+        }
+
+        @-webkit-keyframes ripple {
+            100% {
+                opacity: 0;
+                -webkit-transform: scale(2.5)
+            }
+        }
+
+        @keyframes ripple {
+            100% {
+                opacity: 0;
+                -webkit-transform: scale(2.5);
+                transform: scale(2.5)
+            }
+        }
+
+        @keyframes arrow2 {
+            0% {
+                -webkit-transform: translatey(0);
+                transform: translatey(0)
+            }
+
+            50% {
+                -webkit-transform: translatey(-4px);
+                transform: translatey(-4px)
+            }
+
+            100% {
+                -webkit-transform: translatey(0);
+                transform: translatey(0)
+            }
+        }
+
+        .pa85 {
+            margin-top: 85px
+        }
+
+        .f9-bg {
+            background: #f9f9f9
+        }
+
+        @keyframes arrow2 {
+            0% {
+                -webkit-transform: translatey(0);
+                transform: translatey(0)
+            }
+
+            50% {
+                -webkit-transform: translatey(4px);
+                transform: translatey(4px)
+            }
+        }
+
+        @keyframes scalex {
+            0% {
+                transform: scale(1,1)
+            }
+
+            100% {
+                transform: scale(1.1,1.1)
+            }
+        }
+
+        @keyframes scalex2 {
+            0% {
+                transform: scale(1.1,1.1)
+            }
+
+            100% {
+                transform: scale(1,1)
+            }
+        }
+
+        .n-team {
+            min-width: 1200px
+        }
+
+        .n-team .lista .team-leader .wz img {
+            display: inline-block;
+            max-width: 100%
+        }
+
+        .n-team .lista .team-leader .wen-l .p {
+            font-size: 14px;
+            line-height: 24px;
+            margin: 20px 0
+        }
+
+        .n-team .listb {
+            width: 100%;
+            margin-bottom: 80px
+        }
+
+        .n-team .listb .n-scroll {
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            margin: 0 auto;
+            margin-bottom: 10px
+        }
+
+        .n-team .listb .n-scroll li {
+            float: left;
+            overflow: hidden;
+            position: relative;
+            margin-right: 15px;
+            cursor: pointer
+        }
+
+        .n-team .listb .n-scroll li>img {
+            width: 100%;
+            display: inline-block;
+            transition: all .5s
+        }
+
+        .n-team .listb .n-scroll li .inner {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: .8;
+            filter: alpha(opacity=80)
+        }
+
+        .n-team .listb .n-scroll li .tit {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 32.6%
+        }
+
+        .n-team .listb .n-scroll li .tit .h {
+            font-size: 28px;
+            color: #fff;
+            line-height: 30px;
+            margin-bottom: 10px
+        }
+
+        .n-team .listb .n-scroll li .tit .p {
+            font-size: 16px;
+            line-height: 18px;
+            margin-bottom: 22px;
+            color: #fff
+        }
+
+        .n-team .listb .n-scroll li .tit .jia {
+            display: inline-block
+        }
+
+        .n-team .listb .n-scroll .tit {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 148px
+        }
+
+        .n-team .listb .n-scroll .tit .h {
+            font-size: 30px;
+            line-height: 32px;
+            margin-bottom: 12px;
+            color: #333;
+            font-weight: bold
+        }
+
+        .n-team .listb .n-scroll .tit .p {
+            font-size: 16px;
+            line-height: 24px;
+            color: #333
+        }
+
+        .n-team .listb .n-scroll li.cur .inner {
+            top: 0!important
+        }
+
+        .n-team .listb .team-scroll:hover .prev,.n-team .listb .team-scroll:hover .next {
+            opacity: 1;
+            filter: alpha(opacity=100);
+            transition: all .8s
+        }
+
+        .n-team .listb .team-scroll:hover .prev {
+            left: -40px
+        }
+
+        .n-team .listb .team-scroll:hover .next {
+            right: -40px
+        }
+
+        .n-team .listb .team-scroll {
+            position: relative
+        }
+
+        .n-team .listb .team-scroll .prev {
+            background: url(http://www.simei.cc/Resources/Web/Images/pic11.jpg) no-repeat;
+            width: 29px;
+            height: 60px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -25px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            transition: all .5s;
+            z-index: 1
+        }
+
+        .n-team .listb .team-scroll .next {
+            background: url(http://www.simei.cc/Resources/Web/Images/pic11-1.jpg) no-repeat;
+            width: 29px;
+            height: 60px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -25px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            transition: all .8s;
+            z-index: 1
+        }
+
+        .n-team .listb .team-ajax {
+            padding: 55px 0 65px;
+            position: relative
+        }
+
+        .n-team .listb .team-ajax .dd {
+            width: 266px
+        }
+
+        .n-team .listb .team-ajax .dd img {
+            max-width: 100%
+        }
+
+        .n-team .listb .team-ajax .dt {
+            width: 810px;
+            font-size: 16px;
+            line-height: 28px;
+            color: #666
+        }
+
+        .n-team .listb .team-ajax .dt .h {
+            font-size: 28px;
+            color: #333;
+            line-height: 30px;
+            margin-bottom: 10px
+        }
+
+        .n-team .listb .team-ajax .dt .y {
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 22px;
+            color: #999
+        }
+
+        @keyframes scale {
+            0% {
+                transform: scale(1,1)
+            }
+
+            100% {
+                transform: scale(1.1,1.1)
+            }
+        }
+
+        .n-team .team-scroll{
+            opacity: 0;
+            transform: translate(0,80px)
+        }
+    </style>
+</head>
+<body>
+<div class="w906" style="transform: translate(0px, 0px); opacity: 1;">
+    <div class="n-team pa85">
+        <div class="listb pa85" style="transform: translate(0px, 0px); opacity: 1;">
+            <div class="team-scroll" style="transform: translate(0px, 0px); opacity: 1;">
+                <div class="n-scroll">
+                    <ul class="f-cb" style="width: 3440px;">
+                        <li data-id="87fb404a-9c92-4614-9f27-a11681be4727" style="width: 279.85px; overflow: hidden; position: relative;">
+                            <img src="http://www.simei.cc/StorageFiles/2017/4/12/076fb72b-809e-48b1-ac19-615808e79357.jpg_335x390.jpeg" alt="">
+                            <div class="inner" style="position: absolute; top: 326px; left: 0px;">
+                                <div class="tit">
+                                    <div class="h">朱明虬 </div>
+                                    <div class="p">
+                                        董事长
+                                    </div>
+                                    <img class="jia" src="http://www.simei.cc/Resources/Web/Images/pic13.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="7078a6c7-5ccf-4fd2-9208-ae8d104cf63b" style="width: 279.85px; overflow: hidden; position: relative;">
+                            <img src="http://www.simei.cc/StorageFiles/2017/4/12/076fb72b-809e-48b1-ac19-615808e79357.jpg_335x390.jpeg" alt="">
+                            <div class="inner" style="position: absolute; top: 326px; left: -280px;">
+                                <div class="tit">
+                                    <div class="h">黄浩挺</div>
+                                    <div class="p">
+                                        CEO
+                                    </div>
+                                    <img class="jia" src="http://www.simei.cc/Resources/Web/Images/pic13.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="a50061f6-3bc5-4a1d-9393-65e511c6ff9d" style="width: 279.85px; overflow: hidden; position: relative;">
+                            <img src="http://www.simei.cc/StorageFiles/2017/4/12/076fb72b-809e-48b1-ac19-615808e79357.jpg_335x390.jpeg" alt="">
+                            <div class="inner" style="position: absolute; top: 0px; left: -280px;">
+                                <div class="tit">
+                                    <div class="h">张国昀</div>
+                                    <div class="p">
+                                        副总裁、CFO
+                                    </div>
+                                    <img class="jia" src="http://www.simei.cc/Resources/Web/Images/pic13.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="655cc38e-92ae-4e20-8203-377c9b7c1e7b" style="width: 279.85px; overflow: hidden; position: relative;">
+                            <img src="http://www.simei.cc/StorageFiles/2017/4/12/076fb72b-809e-48b1-ac19-615808e79357.jpg_335x390.jpeg" alt="">
+                            <div class="inner" style="position: absolute; top: 326px;">
+                                <div class="tit">
+                                    <div class="h">徐飞</div>
+                                    <div class="p">
+                                        CIO
+                                    </div>
+                                    <img class="jia" src="http://www.simei.cc/Resources/Web/Images/pic13.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="b54cd844-eb6c-4085-9f12-d815fd2f4f4a" style="width: 279.85px; overflow: hidden; position: relative;">
+                            <img src="http://www.simei.cc/StorageFiles/2017/4/12/076fb72b-809e-48b1-ac19-615808e79357.jpg_335x390.jpeg" alt="">
+                            <div class="inner" style="position: absolute; top: 326px;">
+                                <div class="tit">
+                                    <div class="h">高笑河</div>
+                                    <div class="p">
+                                        CTO
+                                    </div>
+                                    <img class="jia" src="http://www.simei.cc/Resources/Web/Images/pic13.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="364e007e-b3e8-4415-a408-d11266344c0a" style="width: 279.85px; overflow: hidden; position: relative;">
+                            <img src="http://www.simei.cc/StorageFiles/2017/4/12/076fb72b-809e-48b1-ac19-615808e79357.jpg_335x390.jpeg" alt="">
+                            <div class="inner" style="position: absolute; top: 326px;">
+                                <div class="tit">
+                                    <div class="h">潘海强</div>
+                                    <div class="p">
+                                        副总裁、董事会秘书
+                                    </div>
+                                    <img class="jia" src="http://www.simei.cc/Resources/Web/Images/pic13.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="dd9f5cf7-c005-49c7-82bb-e2d972f0a2cc" style="width: 279.85px; overflow: hidden; position: relative;">
+                            <img src="http://www.simei.cc/StorageFiles/2017/4/12/076fb72b-809e-48b1-ac19-615808e79357.jpg_335x390.jpeg" alt="">
+                            <div class="inner" style="position: absolute; top: 326px;">
+                                <div class="tit">
+                                    <div class="h">陈静波</div>
+                                    <div class="p">
+                                        副总裁、思美科技总经理
+                                    </div>
+                                    <img class="jia" src="http://www.simei.cc/Resources/Web/Images/pic13.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="e199e368-1939-4dd6-b169-0229fe9a422a" style="width: 279.85px; overflow: hidden; position: relative;">
+                            <img src="http://www.simei.cc/StorageFiles/2017/4/12/076fb72b-809e-48b1-ac19-615808e79357.jpg_335x390.jpeg" alt="">
+                            <div class="inner" style="position: absolute; top: 326px;">
+                                <div class="tit">
+                                    <div class="h">虞军</div>
+                                    <div class="p">
+                                        副总裁、思美广告事业群总经理
+                                    </div>
+                                    <img class="jia" src="http://www.simei.cc/Resources/Web/Images/pic13.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="25f81b9d-da1f-46c0-bdb6-d9ac9af3ffa8" style="width: 279.85px; overflow: hidden; position: relative;">
+                            <img src="http://www.simei.cc/StorageFiles/2017/4/12/076fb72b-809e-48b1-ac19-615808e79357.jpg_335x390.jpeg" alt="">
+                            <div class="inner" style="position: absolute; top: 326px;">
+                                <div class="tit">
+                                    <div class="h">俞建华 </div>
+                                    <div class="p">
+                                        副总裁、思美广告传统媒体采购总经理
+                                    </div>
+                                    <img class="jia" src="http://www.simei.cc/Resources/Web/Images/pic13.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li data-id="c57dc2aa-774e-4a4d-aeb1-623258ae5880" style="width: 279.85px; overflow: hidden; position: relative;">
+                            <img src="http://www.simei.cc/StorageFiles/2017/4/12/076fb72b-809e-48b1-ac19-615808e79357.jpg_335x390.jpeg" alt="">
+                            <div class="inner" style="position: absolute; top: 326px;">
+                                <div class="tit">
+                                    <div class="h">Peter Tan     </div>
+                                    <div class="p">
+                                        思美研究中心总经理
+                                    </div>
+                                    <img class="jia" src="http://www.simei.cc/Resources/Web/Images/pic13.png" alt="">
+                                </div>
+                            </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="prev"></div>
+                <div class="next"></div>
+            </div>
+            <div class="team-ajax f9-bg" style="transform: translate(0px, 0px); opacity: 1;"><div class="dlbox w1200 f-cb">
+                <div class="dd fl">
+                    <img src="http://www.simei.cc/StorageFiles/2017/4/12/076fb72b-809e-48b1-ac19-615808e79357.jpg_335x390.jpeg" alt="">
+                </div>
+                <div class="dt fr">
+                    <div class="h">朱明虬 </div>
+                    <div class="y">董事长</div>
+                    <p>
+                        思美传媒创始人，复旦大学管理学院EMBA，拥有近25年的广告行业从业经验。现任思美传媒董事长，中国商务广告协会副会长、中国4A副理事长。。以其策略家的头脑和改革家的胆识，秉承着“敢为人先”的拼搏信念和“细节成就经典”的做事原则，将一家本土广告公司发展成为国际化标准与本土化实践相结合的业界典范。
+                    </p>
+                </div>
+            </div>
+                <div class="loader-img" style="display: none;">
+                    <div class="loader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

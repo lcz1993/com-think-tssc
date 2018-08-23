@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://www.bluefocusgroup.com/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>山西腾盛时创文化传媒</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="${ctxPath}${company.logoIcon}">
+    <link rel="stylesheet" type="text/css" media="screen" href="${ctxPath}/static/reception/web/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="${ctxPath}/static/reception/web/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="${ctxPath}/static/reception/web/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="${ctxPath}/static/css/bootstrap.min.css">
+    <script src="${ctxPath}/static/reception/web/js/jquery.min.js"></script>
+    <script src="${ctxPath}/static/reception/web/js/swiper.min.js"></script>
+    <script src="${ctxPath}/static/reception/web/js/swiper.animate1.0.3.min.js"></script>
+    <script src="${ctxPath}/static/reception/web/js/countUp.min.js"></script>
+    <script src="${ctxPath}/static/reception/web/js/min.js"></script>
+</head>
+
+<body>
+    <header class="am-topbar am-topbar-inverse t-nav ">
+        <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only am-collapsed" data-am-collapse="{target: '#doc-topbar-collapse-2'}"><span class="am-sr-only"></span> <span class="am-icon-bars"></span></button>
+        <div class="am-topbar-collapse am-collapse" id="doc-topbar-collapse-2" style="height: 20px;">
+            <ul class="am-nav am-nav-pills am-topbar-nav">
+                <li><a href="${ctxPath}/tssc">首页</a></li>
+                <li><a href="${ctxPath}/tssc/case">设计案例</a></li>
+                <li><a href="${ctxPath}/tssc/team">团队</a></li>
+                <li><a href="${ctxPath}/tssc/aboutme">关于我们</a></li>
+                <li><a href="${ctxPath}/tssc/talkme">联系我们</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Swiper -->
+    <div class="swiper-container swiper-container-vertical">
+        <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+
+            <!--第一页-->
+            <div class="swiper-slide swiper-slide-active" >
+                <div class="home-layer page1-bg">
+                    <div class="menu-bar">
+                            <a href="${ctxPath}/tssc"><img src="${ctxPath}${company.logo}" class="logo"></a>
+                        <ul class="menu">
+                             <li><a href="${ctxPath}/tssc" class="active-main">首页</a></li>
+                            <li><a href="${ctxPath}/tssc/case">设计案例</a></li>
+                            <li><a href="${ctxPath}/tssc/team">团队</a></li>
+                            <li><a href="${ctxPath}/tssc/aboutme">关于我们</a></li>
+                            <li><a href="${ctxPath}/tssc/talkme">联系我们</a></li>
+                        </ul>
+                    </div>
+                    <div class="home-first-content">
+                        <p class="p1 ani fadeInUp animated company-title text-white" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s" swiper-animate-style-cache=" " style="visibility: visible;animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2s;-webkit-animation-delay:2s;margin-bottom: 5%">${company.name}</p>
+                        <p class="p2 ani fadeInUp animated company-content text-white" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s" swiper-animate-style-cache=" " style="text-indent: 2em;text-align:left;visibility: visible;animation-duration:1s;-webkit-animation-duration:1s;animation-delay:2.5s;-webkit-animation-delay:2.5s;">${company.introduce}</p>
+                    </div>
+                </div>
+                <img class="arrowdown ani fadeInDown animated" src="${ctxPath}/static/reception/web/img/arrow-down.png" swiper-animate-effect="fadeInDown" swiper-animate-duration="2s" swiper-animate-delay="2s" swiper-animate-style-cache=" " style="visibility: visible;animation-duration:2s;-webkit-animation-duration:2s;animation-delay:3s;-webkit-animation-delay:3s;">
+            </div>
+
+            <div class="swiper-slide swiper-slide-next" >
+                <div class="home-layer page2 row">
+                    @for(var i = 0;i< 6;i++){
+                    <div class=" data-div col-md-4" style="background: url('${ctxPath}/static/reception/web/img/bc-${i}.png');background-size:100% 100%;">
+                        <!--<p class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration=".5s" swiper-animate-delay="0s" swiper-animate-style-cache=" " style="visibility: hidden;">¥<span id="number1">152</span>亿</p>-->
+                        <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="${i / 2}s" swiper-animate-style-cache=" " style="visibility: hidden;">${fields[i].name}</p>
+                        <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="${i / 2}s" swiper-animate-style-cache=" " style="visibility: hidden;">${fields[i].nameEng}</p>
+                        <p class="ani anip field-content" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="${i / 2}s" swiper-animate-style-cache=" " style="visibility: hidden;">${fields[i].introduce}</p>
+                        <p class="ani anip" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="${i / 2}s" swiper-animate-style-cache=" " style="visibility: hidden;">
+                            <input type="hidden" value="${fields[i].id}">
+                            <a class="round" href="${ctxPath}/tssc/case?fieldId=${fields[i].id}">more  > </a>
+                        </p>
+                    </div>
+                    @}
+                </div>
+            </div>
+
+            <div class="swiper-slide" >
+                <div class="home-layer page3">
+                    <div class="page3-bg"></div>
+                    <div class="page3-content">
+                        <p class="ani integration-text" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style=" visibility: hidden;" swiper-animate-style-cache="font-size: 50px;color: #b1b1b1;line-height: 22px;">${integrations[0].name}<br></p>
+                        <p class="ani integration-eng-text" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style=" visibility: hidden;" swiper-animate-style-cache="font-size: 40px;color: #b1b1b1;line-height: 22px;">${integrations[0].engName}<br></p>
+                        <p class="ani content-p text-white integration-content-text" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5" style=" visibility: hidden;" swiper-animate-style-cache="font-size: 24px;line-height: 32px;margin-top:30px;">${integrations[0].introduce}</p>
+                        <p class="hr ani " swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.5s" swiper-animate-style-cache=" " style="visibility: hidden;"></p>
+                        <a href="${ctxPath}/tssc/integration/detail?id=${integrations[0].id}" class="learnmore ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s" swiper-animate-style-cache=" " style="visibility: hidden;">了解更多</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide" >
+                <div class="home-layer page4">
+                    <div class="page4-bg"></div>
+                    <div class="page4-content">
+                        <p class="ani integration-text" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style=" visibility: hidden;" swiper-animate-style-cache="font-size: 50px;color: #b1b1b1;line-height: 22px;">${integrations[1].name}<br></p>
+                        <p class="ani integration-eng-text" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style=" visibility: hidden;" swiper-animate-style-cache="font-size: 40px;color: #b1b1b1;line-height: 22px;">${integrations[1].engName}<br></p>
+                        <p class="ani text-white integration-content-text" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5" style=" visibility: hidden;" swiper-animate-style-cache="font-size: 24px;line-height: 32px;margin-top:30px;">${integrations[1].introduce}</p>
+                        <p class="hr ani " swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5s" swiper-animate-style-cache=" " style="visibility: hidden;"></p>
+                        <a href="${ctxPath}/tssc/integration/detail?id=${integrations[1].id}" class="learnmore ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s" swiper-animate-style-cache=" " style="visibility: hidden;">了解更多</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide" >
+                <div class="home-layer page5">
+                    <div class="page5-bg"></div>
+                    <div class="page5-content">
+                        <p class="ani integration-text" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style="visibility: hidden;" swiper-animate-style-cache="font-size: 50px;color: #b1b1b1;line-height: 22px;">${integrations[2].name}<br></p>
+                        <p class="ani integration-eng-text" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" style="visibility: hidden;" swiper-animate-style-cache="font-size: 40px;color: #b1b1b1;line-height: 22px;">${integrations[2].engName}<br></p>
+                        <p class="ani text-white integration-content-text" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5" style=" visibility: hidden;" swiper-animate-style-cache="font-size: 24px;line-height: 32px;margin-top:30px;">${integrations[2].introduce}</p>
+                        <p class="hr ani " swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5s" swiper-animate-style-cache=" " style="visibility: hidden;"></p>
+                        <a href="${ctxPath}/tssc/integration/detail?id=${integrations[2].id}" class="learnmore ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s" swiper-animate-style-cache=" " style="visibility: hidden;">了解更多</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide" style="background: rgb(16, 25, 38); height: 835px;">
+                <div class="page6-bg"></div>
+                <div class="page6">
+                    <div class="footer page9-footer color-whild row" style="position: absolute;bottom:0;padding-top: 5%">
+                        <div class=" padding-left-10 col-md-4 ani text-left"  swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay=".5s" swiper-animate-style-cache=" ">
+                            <h2 class="mar-btm-10">联系我们</h2>
+                            <p class="">地址：${company.address}</p>
+                            <p class="">Phone：${company.tel}</p>
+                            <p class="">Email：${company.email}</p>
+                        </div>
+                        <div class="col-md-4 ani img-bottom" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1s" swiper-animate-style-cache=" ">
+                            <img src="${ctxPath}${company.logo}" class="logo-bottom-1 hidden-sm mar-btm-10">
+                        </div>
+                        <div class="col-md-4 ani img-bottom" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="1.5s" swiper-animate-style-cache=" " >
+                            <h1 class="mar-btm-10">关注我们</h1>
+                            <img src="${ctxPath}${company.encode}" class="encode-bottom">
+
+                        </div>
+                        <div style="clear: both"></div>
+                        <div class="footer-info clearfix">
+                            <p class="copyright">Copyright © 2018 TSSC, All Rights Reserved.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 6"></span></div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 0,
+        mousewheel: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        on: {
+            init: function() {
+                swiperAnimateCache(this);
+                swiperAnimate(this);
+            },
+            slideChangeTransitionEnd: function() {
+                swiperAnimate(this); //如果只执行一次
+                if (this.activeIndex == 1) {
+                    countUp();
+                }
+            },
+        }
+    });
+
+    function countUp() {
+        var options = {  
+            useEasing: true,
+              useGrouping: false,
+              separator: '',
+              decimal: '.'
+        };
+        var number1 = new CountUp('number1', 0, 152, 0, 2, options);
+        var number2 = new CountUp('number2', 0, 6000, 0, 2, options);
+        var number3 = new CountUp('number3', 0, 35, 0, 2, options);
+        var number4 = new CountUp('number4', 0, 2000, 0, 2, options);
+        var number5 = new CountUp('number5', 0, 72, 0, 2, options);
+        var number6 = new CountUp('number6', 0, 87, 0, 2, options);
+        number1.start()
+        setTimeout(function() {
+            number2.start()
+        }, 500);
+        setTimeout(function() {
+            number3.start()
+        }, 1000);
+        setTimeout(function() {
+            number4.start()
+        }, 1500);
+        setTimeout(function() {
+            number5.start()
+        }, 2000);
+        setTimeout(function() {
+            number6.start()
+        }, 2500);
+    }
+    $('.top').click(function() {
+        swiper.slideTo(0, 1000, function() {
+            swiperAnimate(this);
+        }); //切换到第一个slide，速度为1秒
+    })
+    $('.arrowdown').click(function() {
+        swiper.slideTo(1, 1000, function() {
+            swiperAnimate(this);
+        });
+    })
+</script>
+</body></html>

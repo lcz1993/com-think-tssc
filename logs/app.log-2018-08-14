@@ -1,0 +1,4 @@
+[2018-08-14T09:45:00.977] [INFO] default - Server running at http://127.0.0.1:8361
+[2018-08-14T09:45:00.979] [INFO] default - ThinkJS version: 3.2.8
+[2018-08-14T09:45:00.979] [INFO] default - Environment: production
+[2018-08-14T09:45:00.979] [INFO] default - Workers: 4

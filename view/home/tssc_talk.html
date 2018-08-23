@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://www.bluefocusgroup.com/index.html -->
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>联系我们</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{logoIcon}}">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/home/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/home/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/home/css/animate.min.css">
+    <script src="/static/home/js/jquery.min.js"></script>
+    <script src="/static/home/js/swiper.min.js"></script>
+    <script src="/static/home/js/swiper.animate1.0.3.min.js"></script>
+    <script src="/static/home/js/countUp.min.js"></script>
+    <script src="/static/home/js/min.js"></script>
+</head>
+<body>
+<header class="am-topbar am-topbar-inverse t-nav ">
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only am-collapsed" data-am-collapse="{target: '#doc-topbar-collapse-2'}"><span class="am-sr-only"></span> <span class="am-icon-bars"></span></button>
+    <div class="am-topbar-collapse am-collapse" id="doc-topbar-collapse-2" style="height: 20px;">
+        <ul class="am-nav am-nav-pills am-topbar-nav">
+            {% for item in navigationList %}
+            <li><a href="/home/tssc/{{item.url}}">{{item.name}}</a></li>
+            {% endfor %}
+            <!--<li><a href="${ctxPath}/tssc">首页</a></li>-->
+            <!--<li><a href="${ctxPath}/tssc/case">设计案例</a></li>-->
+            <!--<li><a href="${ctxPath}/tssc/team">团队</a></li>-->
+            <!--<li><a href="${ctxPath}/tssc/aboutme">关于我们</a></li>-->
+            <!--<li><a href="${ctxPath}/tssc/talkme">联系我们</a></li>-->
+        </ul>
+    </div>
+</header>
+
+<div class="normal-layout">
+    <div class="">
+        <div class="darkmenu">
+            <div class="menu-bar">
+                <a class="stock" href="/"><img src="{{logo}}" class="logo"></a>
+                <ul class="menu">
+                    {% for item in navigationList %}
+                    <li><a href="/home/tssc/{{item.url}}" {%if item.url == data.url%}class="active-main"{%endif%}>{{item.name}}</a></li>
+                    {% endfor %}
+                    <!--<li><a href="${ctxPath}/tssc">首页</a></li>-->
+                    <!--<li><a href="${ctxPath}/tssc/case">设计案例</a></li>-->
+                    <!--<li><a href="${ctxPath}/tssc/team">团队</a></li>-->
+                    <!--<li><a href="${ctxPath}/tssc/aboutme">关于我们</a></li>-->
+                    <!--<li><a href="${ctxPath}/tssc/talkme" class="active-main">联系我们</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="normal-layout-white">
+        <div class="img-title">
+            <h1 class="text-black">{{data.talkTitle}}</h1>
+            <h2 class="text-CCC">{{data.talkTitleEng}}</h2>
+        </div>
+        <div class="float-left location-map">
+            <!--<iframe src="${ctxPath}/tssc/map" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" width="100%" height=100% id="iframemap" name="iframemap" onLoad="iFrameHeight()" ></iframe>-->
+
+            <!--<script type="text/javascript" language="javascript">-->
+
+                <!--function iFrameHeight() {-->
+
+                    <!--var ifm= document.getElementById("iframemap");-->
+
+                    <!--var subWeb = document.frames ? document.frames["iframemap"].document :-->
+
+                        <!--ifm.contentDocument;-->
+
+                    <!--if(ifm != null && subWeb != null) {-->
+
+                        <!--ifm.height = subWeb.body.scrollHeight;-->
+
+                    <!--}-->
+
+                <!--}-->
+
+            <!--</script>-->
+            <img src="/static/home/img/map.png" style="width: 100%;height: 100%">
+        </div>
+        <div class="float-right">
+            <h3 style="line-height: 1;margin-bottom: 20px;" class="text-black">{{data.title}}</h3>
+            {% for item in talkList %}
+            <h3 class="text-black">{{item.left}}：{{item.right}}</h3>
+            {%endfor%}
+        </div>
+        <div style="clear: both"></div>
+    </div>
+    <!--<div class="swiper-slide" style="background: rgb(16, 25, 38); height: 835px;">-->
+    <!--<div class="page9">-->
+    <div class="footer page9-footer" style="position: fixed;bottom: 0;" >
+        <div class="footer-info clearfix">
+            <p class="copyright">{{copyright}}</p>
+            <p class="copyright">{{record}}</p>
+        </div>
+    </div>
+
+
+</div>
+<script>
+    var csrSwiper = new Swiper('.swiper-container-csr', {
+        slidesPerView: 5,
+        spaceBetween: 0,
+        freeMode: true,
+        navigation: {
+            nextEl: '.csr .swiper-button-next',
+            prevEl: '.csr .swiper-button-prev',
+        }
+    });
+    $(".top").click(function() {
+        var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+        document.documentElement.scrollTop = document.body.scrollTop = -200;
+    });
+</script>
+</body></html>
